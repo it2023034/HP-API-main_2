@@ -1,9 +1,11 @@
 import json
 import re
-from code.prompts import build_explanation_prompt
+from typing import List, Tuple, Dict, Any
+from src.prompts import build_explanation_prompt
 
 
-def load_triples_from_json(path):
+def load_triples_from_json(path: str) -> List[Tuple[str, str, str]]:
+    """Loads structured triples from a JSON file."""
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -20,11 +22,12 @@ def load_triples_from_json(path):
     return triples
 
 
-def extract_explanation_for_triple(dialogue_text, triple, llm):
+def extract_explanation_for_triple(dialogue_text: str, triple: Tuple[str, str, str], llm: Any) -> str:
+    """Generates and cleans a natural language explanation for a single triple using the LLM."""
     prompt = build_explanation_prompt(dialogue_text, triple)
-
     raw = llm.invoke(prompt).strip()
 
+    # Clean system prompt markers from raw output
     for marker in ["<|assistant|>", "TASK:", "RULES:", "DIALOGUE:", "TRIPLE:", "OUTPUT:"]:
         if marker in raw:
             raw = raw.split(marker)[-1].strip()
@@ -34,11 +37,13 @@ def extract_explanation_for_triple(dialogue_text, triple, llm):
     if "Explanation:" in text:
         text = text.split("Explanation:", 1)[-1].strip()
 
+    # Remove repeated triple string from generated explanation
     entity, attribute, value = triple
     triple_text = f"{entity} | {attribute} | {value}"
     if triple_text in text:
         text = text.replace(triple_text, "").strip()
 
+    # Retain only the first full sentence
     match = re.search(r"^.*?[.!?](?=\s|$)", text)
     if match:
         text = match.group(0).strip()
@@ -46,12 +51,12 @@ def extract_explanation_for_triple(dialogue_text, triple, llm):
     return text
 
 
-def build_explanations(dialogue_text, triples, llm):
+def build_explanations(dialogue_text: str, triples: List[Tuple[str, str, str]], llm: Any) -> List[Dict[str, Any]]:
+    """Generates explanations for a list of triples and formats output dictionary."""
     results = []
 
     for triple in triples:
         entity, attribute, value = triple
-
         explanation = extract_explanation_for_triple(dialogue_text, triple, llm)
 
         results.append({

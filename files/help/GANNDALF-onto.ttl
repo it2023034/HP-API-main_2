@@ -1,0 +1,149 @@
+@prefix : <http://www.ganndalf/ont.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ganndalf/ont.owl> .
+
+<http://www.ganndalf/ont.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:communicatesWith rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Entity ;
+                  rdfs:range :Entity .
+
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Entity ;
+           rdfs:range :Location .
+
+:manages rdf:type owl:ObjectProperty ;
+         rdfs:domain :Entity ;
+         rdfs:range :Account .
+
+:offersService rdf:type owl:ObjectProperty ;
+               rdfs:domain :Organization ;
+               rdfs:range :Service .
+
+:operatesInLocation rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Organization ;
+                    rdfs:range :Location .
+
+:ownedBy rdf:type owl:ObjectProperty ;
+         rdfs:domain :Account ;
+         rdfs:range :Entity .
+
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain :Entity ;
+        rdfs:range :Organization .
+
+:provides rdf:type owl:ObjectProperty ;
+          rdfs:domain :Entity ;
+          rdfs:range :Transaction .
+
+:receivesFundFrom rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Entity ;
+                  rdfs:range :Transaction .
+
+:requests rdf:type owl:ObjectProperty ;
+          rdfs:domain :Entity ;
+          rdfs:range :Transaction .
+
+:sender rdf:type owl:ObjectProperty ;
+        rdfs:domain :Message ;
+        rdfs:range :Entity .
+
+:receiver rdf:type owl:ObjectProperty ;
+          rdfs:domain :Message ;
+          rdfs:range :Entity .
+
+:refersToEntity rdf:type owl:ObjectProperty ;
+                rdfs:domain :Message ;
+                rdfs:range :Entity .
+
+:usesTechnology rdf:type owl:ObjectProperty ;
+                rdfs:domain :Organization ;
+                rdfs:range :Technology .
+
+:usesAccount rdf:type owl:ObjectProperty ;
+             rdfs:domain :Transaction ;
+             rdfs:range :Account .
+
+#################################################################
+#    Data properties
+#################################################################
+
+:denominatedIn rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Transaction ;
+               rdfs:range xsd:string .
+
+:hasBalance rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Account ;
+            rdfs:range xsd:double .
+
+:hasPurpose rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Transaction ;
+            rdfs:range xsd:string .
+
+:hasRole rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Person ;
+         rdfs:range xsd:string .
+
+:involvesAmount rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Transaction ;
+                rdfs:range xsd:double .
+
+:messageHasContent rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Message ;
+                   rdfs:range xsd:string .
+
+:timestamp rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Message ;
+           rdfs:range xsd:dateTimeStamp .
+
+:website rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Entity ;
+         rdfs:range xsd:string .
+
+:hasPhoneNumber rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Entity ;
+                rdfs:range xsd:string .
+
+:hasAccountIdentifier rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Account ;
+                      rdfs:range xsd:string .
+
+:hasEmail rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Entity ;
+          rdfs:range xsd:string .
+
+:hasCredentialPassword rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Account ;
+                       rdfs:range xsd:string .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Account rdf:type owl:Class .
+
+:Entity rdf:type owl:Class .
+
+:Location rdf:type owl:Class .
+
+:Message rdf:type owl:Class .
+
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf :Entity .
+
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :Entity .
+
+:Service rdf:type owl:Class .
+
+:Technology rdf:type owl:Class .
+
+:Transaction rdf:type owl:Class .

@@ -1,0 +1,4 @@
+Kevin | communicatesWith | Margaret Thompson
+Margaret Thompson | communicatesWith | Kevin
+CryptoGrowthX | website | http://www.CryptoGrowthX.com
+CryptoGrowthX | offersService | Investment Platform
