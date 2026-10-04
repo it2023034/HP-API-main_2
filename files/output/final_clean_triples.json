@@ -1,242 +1,49 @@
 [
-  {
-    "triple": {
-      "entity": "Person1",
-      "attribute": "communicatesWith",
-      "value": "Person2"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Person2",
-      "attribute": "communicatesWith",
-      "value": "Person1"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Organization1",
-      "attribute": "website",
-      "value": "http://www.CryptoGrowthX.com"
-    },
-    "explanation": "Based on the conversation, Lucy explicitly provided Wilfred King with the URL to visit http://www.CryptoGrowthX.com for more details about their exclusive cryptocurrency investment opportunity, thereby establishing a clear link between CryptoGrowthX and its official website."
-  },
-  {
-    "triple": {
-      "entity": "Organization1",
-      "attribute": "offersService",
-      "value": "Educational Support"
-    },
-    "explanation": "CryptoGrowthX offered educational support to Wilfred King by providing full educational resources and personal guidance during his investment journey, as evidenced by Lucy's explicit mention of these services in their WhatsApp conversation."
-  },
-  {
-    "triple": {
-      "entity": "Organization1",
-      "attribute": "offersService",
-      "value": "Personal Guidance"
-    },
-    "explanation": "Based on the conversation, CryptoGrowthX explicitly offered personal guidance as part of their service by assuring Wilfred King that they provide \"full educational support and personal guidance throughout your investment journey,\" demonstrating their commitment to helping beginners like him navigate the crypto market effectively."
-  },
-  {
-    "triple": {
-      "entity": "Message_1_case_1",
-      "attribute": "type",
-      "value": "Message"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_1_case_1",
-      "attribute": "sender",
-      "value": "Person1"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_1_case_1",
-      "attribute": "receiver",
-      "value": "Person2"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_1_case_1",
-      "attribute": "timestamp",
-      "value": "23/04/2024, 04:59"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_1_case_1",
-      "attribute": "messageHasContent",
-      "value": "Hello Wilfred, exclusive cryptocurrency investment opportunity through CryptoGrowthX. Guaranteed returns for experienced investors."
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_2_case_1",
-      "attribute": "type",
-      "value": "Message"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_2_case_1",
-      "attribute": "sender",
-      "value": "Person2"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_2_case_1",
-      "attribute": "receiver",
-      "value": "Person1"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_2_case_1",
-      "attribute": "timestamp",
-      "value": "23/04/2024, 05:46"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_2_case_1",
-      "attribute": "messageHasContent",
-      "value": "Miss, I've never invested in cryptocurrency. Is there educational support for beginners?"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_3_case_1",
-      "attribute": "type",
-      "value": "Message"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_3_case_1",
-      "attribute": "sender",
-      "value": "Person1"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_3_case_1",
-      "attribute": "receiver",
-      "value": "Person2"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_3_case_1",
-      "attribute": "timestamp",
-      "value": "23/04/2024, 06:32"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_3_case_1",
-      "attribute": "messageHasContent",
-      "value": "Absolutely Wilfred! CryptoGrowthX provides full educational support and personal guidance throughout your investment journey."
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_4_case_1",
-      "attribute": "type",
-      "value": "Message"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_4_case_1",
-      "attribute": "sender",
-      "value": "Person2"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_4_case_1",
-      "attribute": "receiver",
-      "value": "Person1"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_4_case_1",
-      "attribute": "timestamp",
-      "value": "23/04/2024, 07:18"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_4_case_1",
-      "attribute": "messageHasContent",
-      "value": "Where to look for more details?"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_5_case_1",
-      "attribute": "type",
-      "value": "Message"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_5_case_1",
-      "attribute": "sender",
-      "value": "Person1"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_5_case_1",
-      "attribute": "receiver",
-      "value": "Person2"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_5_case_1",
-      "attribute": "timestamp",
-      "value": "23/04/2024, 08:04"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Message_5_case_1",
-      "attribute": "messageHasContent",
-      "value": "Visit http://www.CryptoGrowthX.com"
-    },
-    "explanation": ""
-  }
+  {"triple": {"entity": "Person1", "attribute": "locatedIn", "value": "Location2"}, "explanation": "Mary Pappa is located in Greece because her Facebook profile indicates she is from Greece, and she has been communicating with Richard Coleman and Michael Anderson regarding financial matters related to her location."},
+  {"triple": {"entity": "Person2", "attribute": "locatedIn", "value": "Location4"}, "explanation": "The locatedIn relation between Michael Anderson and Texas, USA is supported by the context log: '[18/01/2026 10:32:08] Michael Anderson -> Mary Pappa: I'm from Texas, USA'."},
+  {"triple": {"entity": "Person2", "attribute": "partOf", "value": "Organization3"}, "explanation": "The partOf relation between Michael Anderson and US Marine Corps is supported by the context log: '[18/01/2026 10:32:09] Michael Anderson -> Mary Pappa: I'm currently deployed in Syria with the US Marine Corps'."},
+  {"triple": {"entity": "Person2", "attribute": "locatedIn", "value": "Location3"}, "explanation": "Michael Anderson is located in Syria based on the context provided, as he is communicating from a location known for such fraudulent activities targeting victims in Europe and the United States."},
+  {"triple": {"entity": "Person2", "attribute": "hasPhoneNumber", "value": "+44 7405 812 443"}, "explanation": "Michael Anderson has the phone number +44 7405 812 443, as evidenced by its use in communications within the provided context."},
+  {"triple": {"entity": "Person1", "attribute": "hasPhoneNumber", "value": "6949999999"}, "explanation": "The hasPhoneNumber relation between Mary Pappa and 6949999999 is supported by the context log: '[02/03/2026 10:28:04] Mary Pappa -> Michael Anderson: Sure, here is my number: 6949999999'."},
+  {"triple": {"entity": "Person1", "attribute": "requests", "value": "Transaction"}, "explanation": "Mary Pappa requests a transaction to be made as she is instructed to transfer additional funds to continue with the investment, despite her lack of available money."},
+  {"triple": {"entity": "Transaction", "attribute": "hasPurpose", "value": "medical_expenses_coverage"}, "explanation": "The transaction was intended to cover surgery and expenses as communicated by Richard Coleman to Mary Pappa."},
+  {"triple": {"entity": "Person1", "attribute": "provides", "value": "Transaction"}, "explanation": "Mary Pappa provides transaction details to Richard Coleman, who instructs her to make financial transfers and access her account using provided credentials."},
+  {"triple": {"entity": "Organization2", "attribute": "website", "value": "www.global-diplomatic-shipping.com"}, "explanation": "The website www.global-diplomatic-shipping.com is referenced as the platform for Global Diplomatic Shipping, indicating it serves as the operational and informational hub for the organization."},
+  {"triple": {"entity": "Organization2", "attribute": "hasPhoneNumber", "value": "+44 20 7946 0586"}, "explanation": "Global Diplomatic Shipping has the phone number +44 20 7946 0586, as provided in their automated message to Mary Pappa for contact regarding the customs clearance of her parcel."},
+  {"triple": {"entity": "Person1", "attribute": "receivesFundFrom", "value": "Transaction"}, "explanation": "Mary Pappa is required to make a payment of 2,000 EUR to EuroAsset Legal Consultants as an administrative and legal processing fee to proceed with the recovery of her funds, which is referred to as a transaction in the context."},
+  {"triple": {"entity": "Transaction", "attribute": "usesAccount", "value": "Account_GB29NWBK60161331926844"}, "explanation": "Mary Pappa uses her account to log in and access the credentials provided by Richard Coleman for the purpose of making transactions related to the investment opportunity."},
+  {"triple": {"entity": "Transaction", "attribute": "involvesAmount", "value": "2800"}, "explanation": "The transaction involving Mary Pappa and Richard Coleman includes an amount of 2800, as referenced in their communication about the investment opportunity."},
+  {"triple": {"entity": "Transaction", "attribute": "denominatedIn", "value": "EUR"}, "explanation": "The administrative and legal processing fee required by EuroAsset Legal Consultants for recovery proceedings is denominated in EUR, specifically 2,000 EUR."},
+  {"triple": {"entity": "Transaction", "attribute": "hasPurpose", "value": "customs_and_handling_fees"}, "explanation": "The transaction has the purpose of covering customs clearance and handling charges for the shipment."},
+  {"triple": {"entity": "Daniel Cooper", "attribute": "hasEmail", "value": "clearance@global-diplomatic-shipping.com"}, "explanation": "Daniel Cooper has the email address clearance@global-diplomatic-shipping.com, which was referenced in the context provided."},
+  {"triple": {"entity": "Daniel Cooper", "attribute": "hasPhoneNumber", "value": "+44 20 7946 0586"}, "explanation": "Daniel Cooper has the phone number +44 20 7946 0586, which was provided in the context as a contact number for him."},
+  {"triple": {"entity": "Person3", "attribute": "provides", "value": "Transaction"}, "explanation": "Richard Coleman provides transaction instructions by guiding Mary Pappa through accessing her account and downloading necessary applications to facilitate the investment process."},
+  {"triple": {"entity": "Transaction", "attribute": "involvesAmount", "value": "10000"}, "explanation": "The transaction involves an amount of 10000 EUR as communicated by Richard Coleman when discussing the investment opportunity with Mary Pappa."},
+  {"triple": {"entity": "Person2", "attribute": "hasRole", "value": "Financial Advisor"}, "explanation": "Michael Anderson has the role of a financial advisor as he instructs Mary Pappa to make additional investments and accesses her personal information and social media profiles to pressure her into following his directions."},
+  {"triple": {"entity": "Person3", "attribute": "hasRole", "value": "Senior Investment Advisor"}, "explanation": "Richard Coleman has the role of Senior Investment Advisor as he guides Mary Pappa through investment opportunities and account settings."},
+  {"triple": {"entity": "Transaction", "attribute": "involvesAmount", "value": "15000"}, "explanation": "The transaction involves an amount of 15000 as communicated by Richard Coleman to Mary Pappa in the context of the investment opportunity."},
+  {"triple": {"entity": "capitalfxpro-market.net", "attribute": "website", "value": "https://capitalfxpro-market.net"}, "explanation": "capitalfxpro-market.net is identified as a website because Michael Anderson provided the URL https://capitalfxpro-market.net to Mary Pappa, indicating it is a web address for a specific opportunity."},
+  {"triple": {"entity": "CapitalFXPro-Market", "attribute": "website", "value": "https://capitalfxpro-market.net"}, "explanation": "CapitalFXPro-Market is identified as the website referenced by the URL https://capitalfxpro-market.net, which Michael Anderson shared with Mary Pappa as a significant opportunity."},
+  {"triple": {"entity": "Transaction", "attribute": "hasPurpose", "value": "investment"}, "explanation": "The transaction has the purpose of facilitating Mary Pappa's investment as communicated by Richard Coleman and Michael Anderson in their discussions about accessing and managing her account for the investment opportunity."},
+  {"triple": {"entity": "Person3", "attribute": "manages", "value": "Account_GB29NWBK60161331926844"}, "explanation": "Richard Coleman manages Mary Pappa's account by providing her with login credentials and guiding her through technical settings changes, indicating his control and management over her account."},
+  {"triple": {"entity": "Account_GB29NWBK60161331926844", "attribute": "ownedBy", "value": "Person1"}, "explanation": "Mary Pappa's account was referenced when Richard Coleman provided her with credentials to log into her account and assist her with technical settings."},
+  {"triple": {"entity": "Account_GB29NWBK60161331926844", "attribute": "hasAccountIdentifier", "value": "marypappa"}, "explanation": "Richard Coleman provided Mary Pappa with the username \"marypappa\" to access her account, establishing that her account identifier is marypappa."},
+  {"triple": {"entity": "Account_GB29NWBK60161331926844", "attribute": "hasCredentialPassword", "value": "xdfdjehg!#4637"}, "explanation": "Richard Coleman provided Mary Pappa with the password xdfdjehg!#4637 to access her account."},
+  {"triple": {"entity": "AnyDesk", "attribute": "website", "value": "anydesk.com"}, "explanation": "Richard Coleman instructed Mary Pappa to download the AnyDesk application from the website anydesk.com to assist her with technical settings on her account."},
+  {"triple": {"entity": "Organization1", "attribute": "hasEmail", "value": "claims@euroasset-legalconsult.com"}, "explanation": "EuroAsset Legal Consultants has the email claims@euroasset-legalconsult.com, which they use to communicate with affected investors regarding the recovery of funds from an online investment platform under investigation."},
+  {"triple": {"entity": "Organization1", "attribute": "usesTechnology", "value": "Email"}, "explanation": "EuroAsset Legal Consultants uses email to communicate with affected investors by sending them notifications about the recovery process and requesting payment for legal services."},
+  {"triple": {"entity": "Organization1", "attribute": "manages", "value": "Account_GB29NWBK60161331926844"}, "explanation": "EuroAsset Legal Consultants manages the account by initiating legal actions and recovery processes for affected investors based on the payment of an administrative and legal processing fee."},
+  {"triple": {"entity": "Account_GB29NWBK60161331926844", "attribute": "hasAccountIdentifier", "value": "Account1"}, "explanation": "The account identified by the IBAN GB29 NWBK 6016 1331 9268 44 belongs to EuroAsset Legal Consultants as specified in their communication regarding the administrative and legal processing fee for restitution proceedings."},
+  {"triple": {"entity": "Transaction", "attribute": "involvesAmount", "value": "2000"}, "explanation": "The transaction involves an administrative and legal processing fee of 2000 EUR required by EuroAsset Legal Consultants for recovery proceedings."},
+  {"triple": {"entity": "Transaction", "attribute": "requests", "value": "Account_GB29NWBK60161331926844"}, "explanation": "Richard Coleman requests Mary Pappa to log into her account to facilitate the necessary transactions for the investment opportunity."},
+  {"triple": {"entity": "Transaction", "attribute": "hasPurpose", "value": "administrative_and_legal_fees"}, "explanation": "The transaction has the purpose of paying an administrative and legal processing fee to EuroAsset Legal Consultants as required for participation in the restitution proceedings."},
+  {"triple": {"entity": "Organization1", "attribute": "operatesInLocation", "value": "Location1"}, "explanation": "EuroAsset Legal Consultants operates in Europe because they have been appointed to represent affected investors following the seizure of an online investment platform currently under investigation by European financial authorities."},
+  {"triple": {"entity": "Person2", "attribute": "communicatesWith", "value": "Person1"}, "explanation": ""},
+  {"triple": {"entity": "Person1", "attribute": "communicatesWith", "value": "Person2"}, "explanation": ""},
+  {"triple": {"entity": "Person1", "attribute": "communicatesWith", "value": "Organization2"}, "explanation": ""},
+  {"triple": {"entity": "Organization2", "attribute": "communicatesWith", "value": "Person1"}, "explanation": ""},
+  {"triple": {"entity": "Person3", "attribute": "communicatesWith", "value": "Person1"}, "explanation": ""},
+  {"triple": {"entity": "Person1", "attribute": "communicatesWith", "value": "Person3"}, "explanation": ""},
+  {"triple": {"entity": "Organization1", "attribute": "communicatesWith", "value": "Person1"}, "explanation": ""},
+  {"triple": {"entity": "Person1", "attribute": "communicatesWith", "value": "Organization1"}, "explanation": ""}
 ]

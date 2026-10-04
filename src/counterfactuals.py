@@ -1,4 +1,4 @@
-from prompts import build_minimal_counterfactual_prompt
+from src.prompts import build_minimal_counterfactual_prompt
 
 def generate_combined_counterfactuals(true_results, dialogue_text, qwen):
     valid_inputs = [
@@ -20,12 +20,14 @@ def generate_combined_counterfactuals(true_results, dialogue_text, qwen):
             item["explanation"]
         )
         
-        raw_exp = qwen.invoke(
-            explanation_prompt, 
-            stop=["\n", "Explain", "The task", "Output:", "Note:", "To arrive"]
-        ).strip()
+        # Καλούμε το invoke χωρίς το 'stop' keyword argument
+        raw_output = qwen.invoke(explanation_prompt).strip()
         
-        cf_explanation = " ".join(raw_exp.split()).strip().strip('"').strip("'")
+        # Κρατάμε μόνο την πρώτη γραμμή της απάντησης (ισοδύναμο με stop=["\n"])
+        first_line = raw_output.splitlines()[0] if raw_output else ""
+        
+        # Καθαρίζουμε τυχόν διπλά κενά και εισαγωγικά
+        cf_explanation = " ".join(first_line.split()).strip().strip('"').strip("'")
             
         new_entry["counterfactual_explanation"] = cf_explanation
         

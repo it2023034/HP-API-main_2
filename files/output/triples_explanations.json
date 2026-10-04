@@ -1,346 +1,49 @@
 [
-  {
-    "triple": {
-      "entity": "Michael Anderson",
-      "attribute": "hasRole",
-      "value": "US Marine Corps"
-    },
-    "explanation": "Michael Anderson has the role of a US Marine Corps member because he uses tactics and threats similar to those employed by military personnel to coerce Mary Pappa into making further investments."
-  },
-  {
-    "triple": {
-      "entity": "Mary Pappa",
-      "attribute": "locatedIn",
-      "value": "Greece"
-    },
-    "explanation": "Mary Pappa is located in Greece because her profile indicates she is a potential victim of the investment fraud and her interactions with Richard Coleman and Michael Anderson suggest she is based in a country where the Euro is the currency, which is Greece in this context."
-  },
-  {
-    "triple": {
-      "entity": "Michael Anderson",
-      "attribute": "hasPhoneNumber",
-      "value": "+44 7405 812 443"
-    },
-    "explanation": "Michael Anderson has the phone number +44 7405 812 443, which was provided in the text as a means of contact for Mary Pappa to resolve her investment issues."
-  },
-  {
-    "triple": {
-      "entity": "Mary Pappa",
-      "attribute": "requests",
-      "value": "Transaction"
-    },
-    "explanation": "Mary Pappa requests a transaction to be made to cover the administrative and legal processing fee required by EuroAsset Legal Consultants to proceed with the recovery of her funds."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "hasPurpose",
-      "value": "medical procedure"
-    },
-    "explanation": "The transaction has the purpose of covering the administrative and legal processing fee required to participate in the restitution proceedings initiated by EuroAsset Legal Consultants for recovering funds from the seized online investment platform."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "usesAccount",
-      "value": "Account"
-    },
-    "explanation": "Richard Coleman instructs Mary Pappa to log into her account and make an investment, indicating that Mary uses the account for financial transactions."
-  },
-  {
-    "triple": {
-      "entity": "Account",
-      "attribute": "ownedBy",
-      "value": "Michael Anderson"
-    },
-    "explanation": "Michael Anderson accessed and manipulated Mary Pappa's account, indicating he has control over it."
-  },
-  {
-    "triple": {
-      "entity": "Mary Pappa",
-      "attribute": "provides",
-      "value": "Transaction"
-    },
-    "explanation": "Mary Pappa provides transaction details by sharing her personal information and responding to requests for financial actions, as evidenced by her interactions with Richard Coleman and Michael Anderson."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "hasPurpose",
-      "value": "emergency financial assistance"
-    },
-    "explanation": "The transaction has the purpose of providing emergency financial assistance as indicated by the urgent request for an immediate investment to capitalize on a time-sensitive opportunity."
-  },
-  {
-    "triple": {
-      "entity": "Account",
-      "attribute": "ownedBy",
-      "value": "Mary Pappa"
-    },
-    "explanation": "The account is owned by Mary Pappa because Richard Coleman provided her with specific login credentials to access it."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "hasPurpose",
-      "value": "medical expenses"
-    },
-    "explanation": "The transaction was intended to cover medical expenses as explicitly stated by Mary Pappa when she informed Richard Coleman about the purpose of the transfer."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "hasPurpose",
-      "value": "medical emergency"
-    },
-    "explanation": "The transaction was intended to provide funds for a medical emergency as stated by the sender in the initial communication."
-  },
-  {
-    "triple": {
-      "entity": "Mary Pappa",
-      "attribute": "receivesFundFrom",
-      "value": "Transaction"
-    },
-    "explanation": "Mary Pappa receives funds from a transaction initiated by EuroAsset Legal Consultants to cover the administrative and legal processing fee required for the recovery of her potentially eligible victim funds."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "involvesAmount",
-      "value": "2800"
-    },
-    "explanation": "The transaction involves an amount of 2800 euros, which is the sum of the initial investment of 10,000 euros and the subsequent legal processing fee of 2,000 euros mentioned for recovery proceedings."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "denominatedIn",
-      "value": "EUR"
-    },
-    "explanation": "The transaction is denominated in EUR because the text explicitly mentions the required administrative and legal processing fee of 2,000 EUR for participating in the restitution proceedings."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "hasPurpose",
-      "value": "initial investment"
-    },
-    "explanation": "The recommended starting amount of €10,000 was intended to serve as the initial investment for Mary Pappa's account with EuroAsset Management."
-  },
-  {
-    "triple": {
-      "entity": "Daniel Cooper",
-      "attribute": "hasEmail",
-      "value": "clearance@global-diplomatic-shipping.com"
-    },
-    "explanation": "Daniel Cooper has the email address clearance@global-diplomatic-shipping.com associated with him in the record."
-  },
-  {
-    "triple": {
-      "entity": "Global Diplomatic Shipping",
-      "attribute": "website",
-      "value": "www.global-diplomatic-shipping.com"
-    },
-    "explanation": "The website www.global-diplomatic-shipping.com is mentioned as a platform where Mary Pappa was directed to access her account and download the AnyDesk application for further assistance with her investment."
-  },
-  {
-    "triple": {
-      "entity": "Daniel Cooper",
-      "attribute": "hasPhoneNumber",
-      "value": "+44 20 7946 0586"
-    },
-    "explanation": "Daniel Cooper's phone number is listed as +44 20 7946 0586 in the provided text."
-  },
-  {
-    "triple": {
-      "entity": "Richard Coleman",
-      "attribute": "provides",
-      "value": "Transaction"
-    },
-    "explanation": "Richard Coleman provides transaction instructions by guiding Mary Pappa through the process of downloading AnyDesk and logging into her investment account."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "involvesAmount",
-      "value": "10000"
-    },
-    "explanation": "The investment opportunity recommended by Richard Coleman involves an initial amount of €10,000 to be deposited into Mary Pappa's account."
-  },
-  {
-    "triple": {
-      "entity": "Richard Coleman",
-      "attribute": "manages",
-      "value": "Account"
-    },
-    "explanation": "Richard Coleman manages Mary Pappa's account because he provided her with login credentials and instructed her to download software to make changes to her account settings."
-  },
-  {
-    "triple": {
-      "entity": "Michael Anderson",
-      "attribute": "hasRole",
-      "value": "Financial Advisor"
-    },
-    "explanation": "Michael Anderson has the role of a financial advisor because he instructed Mary Pappa to make additional investments and threatened to expose her personal information if she did not comply."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "involvesAmount",
-      "value": "15000"
-    },
-    "explanation": "The transaction involves an amount of 15,000 euros, which is the sum of the initial recommended investment of 10,000 euros and the additional investment required to continue the investment opportunity."
-  },
-  {
-    "triple": {
-      "entity": "Richard Coleman",
-      "attribute": "hasRole",
-      "value": "Senior Investment Advisor"
-    },
-    "explanation": "Richard Coleman has the role of a Senior Investment Advisor because he provides investment advice and guides Mary Pappa through the process of setting up an investment account and making initial investments."
-  },
-  {
-    "triple": {
-      "entity": "CapitalFXPro-Market",
-      "attribute": "website",
-      "value": "https://capitalfxpro-market.net"
-    },
-    "explanation": "The website https://capitalfxpro-market.net is the online platform where Mary Pappa was directed to access her account and engage with the investment opportunity offered by Richard Coleman."
-  },
-  {
-    "triple": {
-      "entity": "Richard Coleman",
-      "attribute": "hasEmail",
-      "value": "marypappa"
-    },
-    "explanation": "Richard Coleman provided Mary Pappa with her account credentials, including the username marypappa, indicating he has her email address or uses it as her username."
-  },
-  {
-    "triple": {
-      "entity": "marypappa",
-      "attribute": "hasCredentialPassword",
-      "value": "xdfdjehg!#4637"
-    },
-    "explanation": "Richard Coleman provided Mary Pappa with the password xdfdjehg!#4637 to access her investment account."
-  },
-  {
-    "triple": {
-      "entity": "AnyDesk",
-      "attribute": "website",
-      "value": "http://www.anydesk.com"
-    },
-    "explanation": "Richard Coleman instructed Mary Pappa to download AnyDesk from its website at anydesk.com to assist her with technical settings on her investment account."
-  },
-  {
-    "triple": {
-      "entity": "EuroAsset Legal Consultants",
-      "attribute": "hasEmail",
-      "value": "claims@euroasset-legalconsult.com"
-    },
-    "explanation": "EuroAsset Legal Consultants has the email claims@euroasset-legalconsult.com listed as the contact point for investors seeking information about the recovery process."
-  },
-  {
-    "triple": {
-      "entity": "EuroAsset Legal Consultants",
-      "attribute": "usesTechnology",
-      "value": "Email"
-    },
-    "explanation": "EuroAsset Legal Consultants uses email to communicate with potentially eligible victims and request an administrative and legal processing fee for recovery proceedings."
-  },
-  {
-    "triple": {
-      "entity": "EuroAsset Legal Consultants",
-      "attribute": "manages",
-      "value": "Account"
-    },
-    "explanation": "EuroAsset Legal Consultants manages the account by initiating legal actions and requesting a processing fee to recover funds for affected investors like Mary Pappa."
-  },
-  {
-    "triple": {
-      "entity": "Account",
-      "attribute": "ownedBy",
-      "value": "EuroAsset Legal Consultants"
-    },
-    "explanation": "The account mentioned in the message from EuroAsset Legal Consultants is owned by EuroAsset Legal Consultants as they are requesting payment details to proceed with the recovery process for affected investors."
-  },
-  {
-    "triple": {
-      "entity": "Account",
-      "attribute": "hasAccountIdentifier",
-      "value": "GB29 NWBK 6016 1331 9268 44"
-    },
-    "explanation": "The payment details provided by EuroAsset Legal Consultants include an IBAN of GB29 NWBK 6016 1331 9268 44 as the account identifier for processing the administrative and legal fee."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "involvesAmount",
-      "value": "2000"
-    },
-    "explanation": "The payment details provided by EuroAsset Legal Consultants involve an administrative and legal processing fee of 2,000 EUR for Mrs."
-  },
-  {
-    "triple": {
-      "entity": "Transaction",
-      "attribute": "requests",
-      "value": "Mary Pappa"
-    },
-    "explanation": "EuroAsset Legal Consultants requests Mary Pappa to pay a 2,000 EUR administrative and legal processing fee to proceed with the recovery of her funds."
-  },
-  {
-    "triple": {
-      "entity": "Michael Anderson",
-      "attribute": "communicatesWith",
-      "value": "Mary Pappa"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Mary Pappa",
-      "attribute": "communicatesWith",
-      "value": "Michael Anderson"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Global Diplomatic Shipping",
-      "attribute": "communicatesWith",
-      "value": "Mary Pappa"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Richard Coleman",
-      "attribute": "communicatesWith",
-      "value": "Mary Pappa"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Mary Pappa",
-      "attribute": "communicatesWith",
-      "value": "Richard Coleman"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "EuroAsset Legal Consultants",
-      "attribute": "communicatesWith",
-      "value": "Mary Pappa"
-    },
-    "explanation": ""
-  },
-  {
-    "triple": {
-      "entity": "Mary Pappa",
-      "attribute": "communicatesWith",
-      "value": "EuroAsset Legal Consultants"
-    },
-    "explanation": ""
-  }
+  {"triple": {"entity": "Mary Pappa", "attribute": "locatedIn", "value": "Greece"}, "explanation": "Mary Pappa is located in Greece because her Facebook profile indicates she is from Greece, and she has been communicating with Richard Coleman and Michael Anderson regarding financial matters related to her location."},
+  {"triple": {"entity": "Michael Anderson", "attribute": "locatedIn", "value": "Texas, USA"}, "explanation": "The locatedIn relation between Michael Anderson and Texas, USA is supported by the context log: '[18/01/2026 10:32:08] Michael Anderson -> Mary Pappa: I'm from Texas, USA'."},
+  {"triple": {"entity": "Michael Anderson", "attribute": "partOf", "value": "US Marine Corps"}, "explanation": "The partOf relation between Michael Anderson and US Marine Corps is supported by the context log: '[18/01/2026 10:32:09] Michael Anderson -> Mary Pappa: I'm currently deployed in Syria with the US Marine Corps'."},
+  {"triple": {"entity": "Michael Anderson", "attribute": "locatedIn", "value": "Syria"}, "explanation": "Michael Anderson is located in Syria based on the context provided, as he is communicating from a location known for such fraudulent activities targeting victims in Europe and the United States."},
+  {"triple": {"entity": "Michael Anderson", "attribute": "hasPhoneNumber", "value": "+44 7405 812 443"}, "explanation": "Michael Anderson has the phone number +44 7405 812 443, as evidenced by its use in communications within the provided context."},
+  {"triple": {"entity": "Mary Pappa", "attribute": "hasPhoneNumber", "value": "6949999999"}, "explanation": "The hasPhoneNumber relation between Mary Pappa and 6949999999 is supported by the context log: '[02/03/2026 10:28:04] Mary Pappa -> Michael Anderson: Sure, here is my number: 6949999999'."},
+  {"triple": {"entity": "Mary Pappa", "attribute": "requests", "value": "Transaction"}, "explanation": "Mary Pappa requests a transaction to be made as she is instructed to transfer additional funds to continue with the investment, despite her lack of available money."},
+  {"triple": {"entity": "Transaction", "attribute": "hasPurpose", "value": "medical_expenses_coverage"}, "explanation": "The transaction was intended to cover surgery and expenses as communicated by Richard Coleman to Mary Pappa."},
+  {"triple": {"entity": "Mary Pappa", "attribute": "provides", "value": "Transaction"}, "explanation": "Mary Pappa provides transaction details to Richard Coleman, who instructs her to make financial transfers and access her account using provided credentials."},
+  {"triple": {"entity": "Global Diplomatic Shipping", "attribute": "website", "value": "www.global-diplomatic-shipping.com"}, "explanation": "The website www.global-diplomatic-shipping.com is referenced as the platform for Global Diplomatic Shipping, indicating it serves as the operational and informational hub for the organization."},
+  {"triple": {"entity": "Global Diplomatic Shipping", "attribute": "hasPhoneNumber", "value": "+44 20 7946 0586"}, "explanation": "Global Diplomatic Shipping has the phone number +44 20 7946 0586, as provided in their automated message to Mary Pappa for contact regarding the customs clearance of her parcel."},
+  {"triple": {"entity": "Mary Pappa", "attribute": "receivesFundFrom", "value": "Transaction"}, "explanation": "Mary Pappa is required to make a payment of 2,000 EUR to EuroAsset Legal Consultants as an administrative and legal processing fee to proceed with the recovery of her funds, which is referred to as a transaction in the context."},
+  {"triple": {"entity": "Transaction", "attribute": "usesAccount", "value": "Account_GB29NWBK60161331926844"}, "explanation": "Mary Pappa uses her account to log in and access the credentials provided by Richard Coleman for the purpose of making transactions related to the investment opportunity."},
+  {"triple": {"entity": "Transaction", "attribute": "involvesAmount", "value": "2800"}, "explanation": "The transaction involving Mary Pappa and Richard Coleman includes an amount of 2800, as referenced in their communication about the investment opportunity."},
+  {"triple": {"entity": "Transaction", "attribute": "denominatedIn", "value": "EUR"}, "explanation": "The administrative and legal processing fee required by EuroAsset Legal Consultants for recovery proceedings is denominated in EUR, specifically 2,000 EUR."},
+  {"triple": {"entity": "Transaction", "attribute": "hasPurpose", "value": "customs_and_handling_fees"}, "explanation": "The transaction has the purpose of covering customs clearance and handling charges for the shipment."},
+  {"triple": {"entity": "Daniel Cooper", "attribute": "hasEmail", "value": "clearance@global-diplomatic-shipping.com"}, "explanation": "Daniel Cooper has the email address clearance@global-diplomatic-shipping.com, which was referenced in the context provided."},
+  {"triple": {"entity": "Daniel Cooper", "attribute": "hasPhoneNumber", "value": "+44 20 7946 0586"}, "explanation": "Daniel Cooper has the phone number +44 20 7946 0586, which was provided in the context as a contact number for him."},
+  {"triple": {"entity": "Richard Coleman", "attribute": "provides", "value": "Transaction"}, "explanation": "Richard Coleman provides transaction instructions by guiding Mary Pappa through accessing her account and downloading necessary applications to facilitate the investment process."},
+  {"triple": {"entity": "Transaction", "attribute": "involvesAmount", "value": "10000"}, "explanation": "The transaction involves an amount of 10000 EUR as communicated by Richard Coleman when discussing the investment opportunity with Mary Pappa."},
+  {"triple": {"entity": "Michael Anderson", "attribute": "hasRole", "value": "Financial Advisor"}, "explanation": "Michael Anderson has the role of a financial advisor as he instructs Mary Pappa to make additional investments and accesses her personal information and social media profiles to pressure her into following his directions."},
+  {"triple": {"entity": "Richard Coleman", "attribute": "hasRole", "value": "Senior Investment Advisor"}, "explanation": "Richard Coleman has the role of Senior Investment Advisor as he guides Mary Pappa through investment opportunities and account settings."},
+  {"triple": {"entity": "Transaction", "attribute": "involvesAmount", "value": "15000"}, "explanation": "The transaction involves an amount of 15000 as communicated by Richard Coleman to Mary Pappa in the context of the investment opportunity."},
+  {"triple": {"entity": "capitalfxpro-market.net", "attribute": "website", "value": "https://capitalfxpro-market.net"}, "explanation": "capitalfxpro-market.net is identified as a website because Michael Anderson provided the URL https://capitalfxpro-market.net to Mary Pappa, indicating it is a web address for a specific opportunity."},
+  {"triple": {"entity": "CapitalFXPro-Market", "attribute": "website", "value": "https://capitalfxpro-market.net"}, "explanation": "CapitalFXPro-Market is identified as the website referenced by the URL https://capitalfxpro-market.net, which Michael Anderson shared with Mary Pappa as a significant opportunity."},
+  {"triple": {"entity": "Transaction", "attribute": "hasPurpose", "value": "investment"}, "explanation": "The transaction has the purpose of facilitating Mary Pappa's investment as communicated by Richard Coleman and Michael Anderson in their discussions about accessing and managing her account for the investment opportunity."},
+  {"triple": {"entity": "Richard Coleman", "attribute": "manages", "value": "Account_GB29NWBK60161331926844"}, "explanation": "Richard Coleman manages Mary Pappa's account by providing her with login credentials and guiding her through technical settings changes, indicating his control and management over her account."},
+  {"triple": {"entity": "Account_GB29NWBK60161331926844", "attribute": "ownedBy", "value": "Mary Pappa"}, "explanation": "Mary Pappa's account was referenced when Richard Coleman provided her with credentials to log into her account and assist her with technical settings."},
+  {"triple": {"entity": "Account_GB29NWBK60161331926844", "attribute": "hasAccountIdentifier", "value": "marypappa"}, "explanation": "Richard Coleman provided Mary Pappa with the username \"marypappa\" to access her account, establishing that her account identifier is marypappa."},
+  {"triple": {"entity": "Account_GB29NWBK60161331926844", "attribute": "hasCredentialPassword", "value": "xdfdjehg!#4637"}, "explanation": "Richard Coleman provided Mary Pappa with the password xdfdjehg!#4637 to access her account."},
+  {"triple": {"entity": "AnyDesk", "attribute": "website", "value": "anydesk.com"}, "explanation": "Richard Coleman instructed Mary Pappa to download the AnyDesk application from the website anydesk.com to assist her with technical settings on her account."},
+  {"triple": {"entity": "EuroAsset Legal Consultants", "attribute": "hasEmail", "value": "claims@euroasset-legalconsult.com"}, "explanation": "EuroAsset Legal Consultants has the email claims@euroasset-legalconsult.com, which they use to communicate with affected investors regarding the recovery of funds from an online investment platform under investigation."},
+  {"triple": {"entity": "EuroAsset Legal Consultants", "attribute": "usesTechnology", "value": "Email"}, "explanation": "EuroAsset Legal Consultants uses email to communicate with affected investors by sending them notifications about the recovery process and requesting payment for legal services."},
+  {"triple": {"entity": "EuroAsset Legal Consultants", "attribute": "manages", "value": "Account_GB29NWBK60161331926844"}, "explanation": "EuroAsset Legal Consultants manages the account by initiating legal actions and recovery processes for affected investors based on the payment of an administrative and legal processing fee."},
+  {"triple": {"entity": "Account_GB29NWBK60161331926844", "attribute": "hasAccountIdentifier", "value": "GB29 NWBK 6016 1331 9268 44"}, "explanation": "The account identified by the IBAN GB29 NWBK 6016 1331 9268 44 belongs to EuroAsset Legal Consultants as specified in their communication regarding the administrative and legal processing fee for restitution proceedings."},
+  {"triple": {"entity": "Transaction", "attribute": "involvesAmount", "value": "2000"}, "explanation": "The transaction involves an administrative and legal processing fee of 2000 EUR required by EuroAsset Legal Consultants for recovery proceedings."},
+  {"triple": {"entity": "Transaction", "attribute": "requests", "value": "Account_GB29NWBK60161331926844"}, "explanation": "Richard Coleman requests Mary Pappa to log into her account to facilitate the necessary transactions for the investment opportunity."},
+  {"triple": {"entity": "Transaction", "attribute": "hasPurpose", "value": "administrative_and_legal_fees"}, "explanation": "The transaction has the purpose of paying an administrative and legal processing fee to EuroAsset Legal Consultants as required for participation in the restitution proceedings."},
+  {"triple": {"entity": "EuroAsset Legal Consultants", "attribute": "operatesInLocation", "value": "Europe"}, "explanation": "EuroAsset Legal Consultants operates in Europe because they have been appointed to represent affected investors following the seizure of an online investment platform currently under investigation by European financial authorities."},
+  {"triple": {"entity": "Michael Anderson", "attribute": "communicatesWith", "value": "Mary Pappa"}, "explanation": ""},
+  {"triple": {"entity": "Mary Pappa", "attribute": "communicatesWith", "value": "Michael Anderson"}, "explanation": ""},
+  {"triple": {"entity": "Mary Pappa", "attribute": "communicatesWith", "value": "Global Diplomatic Shipping"}, "explanation": ""},
+  {"triple": {"entity": "Global Diplomatic Shipping", "attribute": "communicatesWith", "value": "Mary Pappa"}, "explanation": ""},
+  {"triple": {"entity": "Richard Coleman", "attribute": "communicatesWith", "value": "Mary Pappa"}, "explanation": ""},
+  {"triple": {"entity": "Mary Pappa", "attribute": "communicatesWith", "value": "Richard Coleman"}, "explanation": ""},
+  {"triple": {"entity": "EuroAsset Legal Consultants", "attribute": "communicatesWith", "value": "Mary Pappa"}, "explanation": ""},
+  {"triple": {"entity": "Mary Pappa", "attribute": "communicatesWith", "value": "EuroAsset Legal Consultants"}, "explanation": ""}
 ]

@@ -7,17 +7,19 @@ Your objective is to map the dialogue into clean, precise, non-redundant semanti
 
 STRICT EXTRACTION CONSTRAINTS:
 
-1. ATOMIC NAMED ENTITIES ONLY & NO COMPOSED ROLES (CRITICAL DO NOT):
+1. ATOMIC NAMED ENTITIES & QUALIFIED INSTANCES (CRITICAL DO NOT):
    - Every Subject and Object MUST be an explicit, standalone atomic entity (e.g., proper nouns, explicit geographic locations) or a factual literal (e.g., numbers, currencies, URLs).
+   - NEVER use raw categorical or class labels as standalone Subject or Object entities when a unique identifier or specific contextual sub-type is available. If a unique ID/key exists in the text, use that identifier directly as the entity.
    - DO NOT create composed, possessive, or relative entities (NEVER combine entity names with relational nouns or possessive markers).
    - DO NOT extract abstract, emotional, or non-actionable attributes (e.g., `hasRole` must represent an explicit official, legal, or occupational status, NEVER subjective behavioral characteristics).
 
 2. STRICT ATTRIBUTE, IDENTIFIER & CREDENTIAL BOUNDARIES (CRITICAL DO):
-   - `hasEmail` MUST capture explicit email addresses associated with an Entity. NEVER assign email addresses to `website` or `hasPhoneNumber`.
+   - `hasEmail` MUST capture explicit email addresses containing '@'. NEVER assign email addresses or handles to `website` or `hasPhoneNumber`.
    - `hasCredentialPassword` MUST capture explicit authentication passwords or access tokens associated with an Account entity.
    - `hasAccountIdentifier` MUST capture official account numbers, IBANs, or wallet strings. DO NOT output passwords or random strings as account identifiers.
    - `hasPhoneNumber` MUST be used exclusively for raw phone numbers associated with an Entity. NEVER use phone numbers to infer an entity's physical location (`locatedIn`).
-   - `hasPurpose` MUST capture ONLY the direct, operational or commercial objective of a transaction. DO NOT map interpersonal sentiments, emotional expressions, or narrative desires as a transaction purpose.
+   - `hasPurpose` MUST capture ONLY direct operational objectives explicitly stated in the text. DO NOT map interpersonal sentiments, narrative desires, or inferred scenarios.
+   - EXACT LEXICAL GROUNDING FOR ROLES & PURPOSES: Extracted values for `hasRole` and `hasPurpose` MUST be derived directly from explicit noun phrases in the input text. NEVER infer unstated professions, external backgrounds, or speculative motives.
    - `locatedIn` MUST be a concrete, explicitly named geopolitical entity (e.g., city, nation, or standard administrative area). NEVER extract relative distance descriptions, generic placeholders, or infer locations from communication channels.
    - Keep Objects strictly atomic: NO inline comments or notes inside parentheses or after symbols.
 
@@ -75,8 +77,11 @@ Write exactly ONE elegant, natural, and fully completed sentence that explains t
 
 HUMAN-LIKE REASONING & FACTUAL PROOF CONSTRAINTS:
 
-1. LITERAL PROOF & DIRECT EVIDENCE (CRITICAL DO):
-   - Base your sentence strictly on explicit statements or direct actions declared in the text.
+1. LITERAL PROOF & SEARCH HEURISTICS (CRITICAL DO):
+   - Perform an internal search for references to "{entity}" and "{value}" across the context text.
+   - Base your sentence strictly on explicit statements, communications, or direct actions declared in the text.
+   - Evaluate the real-world connection or interaction between "{entity}" and "{value}" rather than asserting its absence.
+   - CRITICAL DO NOT: NEVER write that the relation is "not mentioned", "not referenced", or "lacks evidence".
    - CRITICAL DO NOT: DO NOT invent psychological theories, hidden motives, or unmentioned backstories. NEVER use inferential or speculative phrasing that attributes unstated psychological intent. State purely what was explicitly declared or performed.
 
 2. AVOID SEMANTIC TAUTOLOGY:
@@ -91,32 +96,30 @@ HUMAN-LIKE REASONING & FACTUAL PROOF CONSTRAINTS:
 OUTPUT ONLY THE SINGLE COMPLETED REASONING SENTENCE:
 """.strip()
 
-def build_ner_prompt(dialogue_text):
+def build_ner_prompt(dialogue_text: str) -> str:
+    """Builds prompt for extracting named entities according to strict ontology classes."""
     return f"""
 TASK:
-Extract ONLY specific Named Entities (People, Organizations, Locations, Accounts, Transactions, Messages) from the chat.
+Extract ONLY specific Named Entities (People, Organizations, Locations, Accounts, Transactions, Messages) explicitly mentioned in the text.
 IGNORE all abstract ideas, generic words, URLs, and sentences.
 
 STRICT ONTOLOGY (ONLY THESE ARE ALLOWED):
 [Person, Organization, Location, Account, Transaction, Message]
 
 STRICT EXTRACTION RULES:
-1. NO CONCEPTS: Do not extract abstract concepts, informational terms, or guidance descriptions (e.g., "Education", "Support", "Guidance", "Journey", "Opportunity", "Details"). These are NOT entities.
-2. NO URLS: Completely ignore all http/www links.
-3. UNIQUE IDs: You MUST use the format [Class][Number]. 
-   - CORRECT: Person1, Organization1, Transaction1
-   - INCORRECT: Lucy, Lucy1, Education1
-4. ONE CLASS PER NAME: If 'Lucy' is Person1, she cannot be anything else.
+1. NO CONCEPTS: Do NOT extract abstract terms, informational words, or general guidance descriptions.
+2. NO URLS: Completely ignore all http/www links and email strings.
+3. EXACT LABELS: Output the exact, clean entity name or label as declared in the text.
 
 OUTPUT FORMAT (ONLY TWO LINES PER ENTITY):
-EntityID, rdf:type, Class
-EntityID, label, Name
+[Class], rdf:type, Class
+[Class], label, Name
 
 EXAMPLE:
-Person1, rdf:type, Person
-Person1, label, John Doe
-Organization1, rdf:type, Organization
-Organization1, label, Google
+Person, rdf:type, Person
+Person, label, John Doe
+Organization, rdf:type, Organization
+Organization, label, Google
 
 INPUT CHAT:
 {dialogue_text}
@@ -124,37 +127,38 @@ INPUT CHAT:
 OUTPUT:
 """.strip()
 
-def build_ner_explanation_prompt(dialogue_text, entity_id, entity_class, entity_name):
+
+def build_ner_explanation_prompt(dialogue_text: str, entity_id: str, entity_class: str, entity_name: str) -> str:
+    """Builds prompt for generating single-sentence entity classification reasoning."""
     return f"""
 ROLE:
-You are an explanation generator for Named Entities extracted from a chat history.
-Your task is to explain why a specific entity was assigned a specific category (rdf:type).
+You are an expert semantic analyst explaining Named Entity classification in a Knowledge Graph.
 
-CONTEXT:
-The data below contains a chat history.
-
-CHAT HISTORY:
+CONTEXT CHAT HISTORY:
+\"\"\"
 {dialogue_text}
+\"\"\"
 
-ENTITY CLASSIFICATION (RDF:TYPE TRIPLE):
-Triple: {entity_id} | rdf:type | {entity_class}
-Entity Name (Label): {entity_name}
+TARGET CLASSIFICATION:
+Entity: {entity_name}
+Category: {entity_class}
 
 TASK:
-Write ONLY ONE concise sentence explaining why the word/phrase "{entity_name}" is categorized as a "{entity_class}" in the context of the chat.
+Write exactly ONE concise, fact-based sentence explaining why "{entity_name}" is classified as a "{entity_class}" based on its presence, mentions, or actions in the chat context.
 
 RULES:
-- Explain WHY this entity fits its category based on the chat. (For example, explain what action or context in the chat shows that "{entity_name}" acts like a {entity_class}).
-- Base the explanation strictly on the provided chat context.
-- The explanation MUST explicitly mention the entity name ("{entity_name}").
-- Do NOT repeat or summarize the entire chat.
-- Do NOT explain the extraction process or mention AI models.
-- Output exactly ONE complete sentence ending with a period.
-- Maximum ONE sentence.
-- Stop immediately after the first sentence.
-- Natural language only.
+- Base the explanation strictly on explicit actions, mentions, or references in the text.
+- The explanation MUST explicitly include the entity name "{entity_name}".
+- GENERAL REASONING HEURISTICS:
+  * First, perform a search for "{entity_name}" across the chat context.
+  * If the entity is a direct participant, explain its actions or role.
+  * If the entity appears briefly (e.g., in credentials, metadata, system logs, beneficiary names, or brief references), explain its existence based on that specific contextual appearance.
+  * Evaluate the semantic function of "{entity_name}" in the context rather than asserting its absence.
+- Do NOT invent unstated background facts.
+- Output ONLY plain text (NO markdown, bolding, or bullet points).
+- Maximum ONE sentence ending with a period.
 
-OUTPUT:
+OUTPUT ONLY THE SINGLE EXPLANATION SENTENCE:
 """.strip()
 
 def build_minimal_counterfactual_prompt(dialogue_text, triple, original_explanation):
